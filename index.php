@@ -1,11 +1,12 @@
 <?php
 require_once __DIR__ . '/Router.php';
-require_once __DIR__ . '/templates/template.php';
+require_once __DIR__ . '/templates/Template.php';
 $request = $_SERVER['REQUEST_URI'];
 
 
 
+
 $template = new Template();
-$template-> footer();
+$template->header();
 (new Router())->run($request);
-$template-> header();
+$template->footer();

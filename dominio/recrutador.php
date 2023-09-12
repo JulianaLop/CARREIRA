@@ -1,14 +1,10 @@
 <?php
-class Empresa  {
+class Recrutador {
     private $id;
     private $nome;
-    private $geolocalizacao;
-    private $cidadeIbge;
+    private $email;
     private $telefone;
 
-
-    
-    
 
 	/**
 	 * @return mixed
@@ -45,32 +41,16 @@ class Empresa  {
 	/**
 	 * @return mixed
 	 */
-	public function getGeolocalizacao() {
-		return $this->geolocalizacao;
+	public function getEmail() {
+		return $this->email;
 	}
 	
 	/**
-	 * @param mixed $geolocalizacao 
+	 * @param mixed $email 
 	 * @return self
 	 */
-	public function setGeolocalizacao($geolocalizacao): self {
-		$this->geolocalizacao = $geolocalizacao;
-		return $this;
-	}
-	
-	/**
-	 * @return mixed
-	 */
-	public function getCidadeIbge() {
-		return $this->cidadeIbge;
-	}
-	
-	/**
-	 * @param mixed $cidadeIbge 
-	 * @return self
-	 */
-	public function setCidadeIbge($cidadeIbge): self {
-		$this->cidadeIbge = $cidadeIbge;
+	public function setEmail($email): self {
+		$this->email = $email;
 		return $this;
 	}
 	
