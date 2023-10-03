@@ -1,17 +1,15 @@
 <?php
   require_once 'dominio/empresa.php';
  class EmpresaController {
-   function novo(){
+  public $lista;
+     
 
-      
-   }  
    
-   function incluir(Empresa $empresa){
+     function incluir(Empresa $empresa){
 
      }
      function listar(){
         $empresas = [];
-
         $empresa = new Empresa();
         $empresa->setId(1);
         $empresa->setNome("ETEC PEDRO BADRAN");
@@ -33,7 +31,7 @@
         $empresa->setGeolocalizacao("-20.4838359,-47.8761024");
         $empresa->setCidadeIbge(3549409);
         array_push($empresas,$empresa);
-        return $empresas;
+        $this->lista = $empresas;
      }
      function mostrar($id){
 
